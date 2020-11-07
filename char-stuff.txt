@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define MAXSIZE 100
+int main()
+{
+  char in[MAXSIZE],stuff[MAXSIZE],destuff[MAXSIZE];
+  char *p,*q;
+  int i;
+  
+  printf("enter the string to be character stuffed\n");
+  scanf("%s",in);
+  p=in;
+  q=stuff;
+printf("\nthe stuffed string is");
+printf("\n");
+printf("dle");
+  while(*p!='\0')
+  {
+    if(*p=='d')
+    {
+      *q=*p;
+      p++;
+      q++;
+      if(*p=='l')
+      {
+        *q=*p;
+        p++;
+        q++;
+        if(*p=='e')
+        {
+          *q=*p;
+          p++;
+          q++;
+          *(q++)='d';
+          *(q++)='l';
+          *(q++)='e';
+        }
+      }
+    }
+    else
+    {
+      *q=*p;
+      q++;
+      p++;
+    }
+  }
+  
+  *q='\0';
+  //printf("\nthe stuffed string is");
+  printf("\n%s",stuff);
+printf("dle");
+  p=stuff;
+  q=destuff;
+
+  while(*p!='\0')
+  {
+    if(*p=='d')
+    {
+      *q=*p;
+      p++;
+      q++;
+      if(*p=='l')
+      {
+        *q=*p;
+        p++;
+        q++;
+        if(*p=='e')
+        {
+          *q=*p;
+          p++;
+          q++;
+  
+          for(i=1;i<=3;i++)
+          p++;
+ 
+        }
+      }
+    }
+    else
+    {
+      *q=*p;
+      q++;
+      p++;
+    }
+  }
+  *q='\0';
+  printf("\nthe destuffed string is");
+  printf("\n%s\n",destuff);
+  return 0;
